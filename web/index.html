@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NXT Humans ImgGen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/comfygen/css/imggen.css">
+</head>
+<body>
+  <div class="navbar">
+    <img src="https://nxthumans.com/images/logo.png" alt="NXT Humans Logo">
+    NXT Humans ImgGen
+  </div>
+  <div class="background"></div>
+  <div class="container">
+      <div class="sidebar">
+          <textarea placeholder="Please describe your image..." id="prompt"></textarea>
+          <!-- <input type="text" placeholder="Positive prompts (comma separated)" id="positiveInput"> -->
+          <textarea placeholder="Negative prompts (comma separated)" id="negPrompt"></textarea>
+          <!-- <input type="range" min="0" max="300" class="slider" id="videoLength" value="150" oninput="updateSliderValue()"> -->
+          <!-- <div class="slider-value" id="sliderValue">150 frames</div>
+          <select id="styleSelect">
+              <option value="" disabled selected>Select Style</option>
+              <option value="modern">Modern</option>
+              <option value="vintage">Vintage</option>
+              <option value="futuristic">Futuristic</option>
+          </select> -->
+          <!-- <div class="generate-btn">Generate</div> -->
+          <button id="send-prompt-button">Generate Image</button>
+
+        </div>
+      <div class="content">
+          <div class="video-output" id="videoOutput">
+            <img id="maingen" width="512" height="512" alt="Generated Image Placeholder" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+          </div>
+          <!-- <div class="save-btn" onclick="saveVideo()">Save Video</div> -->
+          <div id="progress">
+            <progress id="main-progress" class="progress" value="0" max="0"></progress>
+          </div>
+          
+        </div>
+  </div>
+  
+  <script src="/comfygen/js/app.js"></script>
+</body>
+</html>
